@@ -1,0 +1,22 @@
+export const theme = {
+  amazon: 'hsl(42, 94%, 53%)',
+  apple: 'hsl(40, 0%, 75%)',
+  facebook: 'hsl(245, 100%, 33%)',
+  google: 'hsl(114, 87%, 49%)',
+  tesla: 'hsl(0, 87%, 49%)',
+  bold: 600,
+  regular: 500,
+  light: 300,
+  grey100: 'hsl(0, 0%, 78%)',
+  grey200: 'hsl(0, 0%, 52%)',
+  grey300: 'hsl(0, 0%, 31%)',
+  black: 'hsl(0, 0%, 0%)',
+  fontSize: {
+    xxs: '1rem',
+    xs: '1.2rem',
+    s: '1.6rem',
+    m: '2.1rem',
+    l: '2.4rem',
+    xl: '4rem',
+  },
+};
