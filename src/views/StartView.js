@@ -1,5 +1,13 @@
 import React from 'react';
+import styled from 'styled-components';
+import StockCard from 'components/molecules/StockCard/StockCard';
+import InfoCard from 'components/molecules/InfoCard/InfoCard';
 
-const StartView = () => <div>lol</div>;
+const StartView = () => (
+  <>
+    <StockCard />
+    <InfoCard />
+  </>
+);
 
 export default StartView;
