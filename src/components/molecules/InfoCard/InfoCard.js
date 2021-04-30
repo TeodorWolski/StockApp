@@ -1,6 +1,10 @@
+import React from 'react';
 import styled from 'styled-components';
+import Heading from 'components/atoms/Heading/Heading';
+import GoogleIcon from 'assets/icons/google.svg';
+import CompanyIcon from 'components/atoms/CompanyIcon/CompanyIcon';
 
-const InfoCard = styled.div`
+const StyledWrapper = styled.div`
   width: 300px;
   height: 500px;
   display: flex;
@@ -14,5 +18,24 @@ const InfoCard = styled.div`
   z-index: 1;
   margin-left: 2%;
 `;
+
+const StyledCompanyIcon = styled(CompanyIcon)`
+  position: relative;
+  right: 55%;
+  bottom: 37%;
+`;
+
+const StyledHeading = styled(Heading)`
+  position: relative;
+  bottom: 35%;
+  margin-left: 50%;
+`;
+
+const InfoCard = () => (
+  <StyledWrapper>
+    <StyledHeading>Google</StyledHeading>
+    <StyledCompanyIcon icon={GoogleIcon} />
+  </StyledWrapper>
+);
 
 export default InfoCard;
