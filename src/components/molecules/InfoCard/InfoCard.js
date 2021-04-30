@@ -1,8 +1,10 @@
 import React from 'react';
 import styled from 'styled-components';
 import Heading from 'components/atoms/Heading/Heading';
+import Paragraph from 'components/atoms/Paragraph/Paragraph';
 import GoogleIcon from 'assets/icons/google.svg';
 import CompanyIcon from 'components/atoms/CompanyIcon/CompanyIcon';
+import FoundersAvatar from 'components/atoms/FoundersAvatar/FoundersAvatar';
 
 const StyledWrapper = styled.div`
   width: 300px;
@@ -19,22 +21,63 @@ const StyledWrapper = styled.div`
   margin-left: 2%;
 `;
 
+const TopWrapper = styled.div`
+  position: absolute;
+  top: 7%;
+  left: 13%;
+  display: flex;
+  flex-direction: row;
+`;
+
 const StyledCompanyIcon = styled(CompanyIcon)`
   position: relative;
-  right: 55%;
-  bottom: 37%;
+  display: block;
+  right: 75%;
+  bottom: 18%;
 `;
 
 const StyledHeading = styled(Heading)`
   position: relative;
-  bottom: 35%;
-  margin-left: 50%;
+  display: block;
+  left: 33%;
+  margin-top: 5%;
+`;
+
+const StyledParagraph = styled(Paragraph)`
+  width: 260px;
+  margin-left: 0;
+  text-align: center;
+`;
+
+const BottomWrapper = styled.div`
+  position: absolute;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+  bottom: 0;
 `;
 
 const InfoCard = () => (
   <StyledWrapper>
-    <StyledHeading>Google</StyledHeading>
-    <StyledCompanyIcon icon={GoogleIcon} />
+    <TopWrapper>
+      <StyledHeading big>Google</StyledHeading>
+      <StyledCompanyIcon
+        href="https://en.wikipedia.org/wiki/Google"
+        target="_blank"
+        rel="noopener noreferrer"
+        icon={GoogleIcon}
+      />
+    </TopWrapper>
+    <StyledParagraph>
+      Google LLC is an American multinational technology company that specializes in
+      Internet-related services and products, which include online advertising technologies, a
+      search engine, cloud computing, software, and hardware.
+    </StyledParagraph>
+    <BottomWrapper>
+      <FoundersAvatar src="http://t2.gstatic.com/licensed-image?q=tbn:ANd9GcQQ840Wk_80H2JjO4wmYQ8VpNzck-GCsmu8a4HqMDNoeZNAH5Zw8qkRZc9a2C9v" />
+      <FoundersAvatar src="https://upload.wikimedia.org/wikipedia/commons/a/a2/Sergey_Brin_cropped.jpg" />
+    </BottomWrapper>
   </StyledWrapper>
 );
 

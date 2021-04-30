@@ -1,6 +1,6 @@
 import styled from 'styled-components';
 
-const CompanyIcon = styled.div`
+const CompanyIcon = styled.a`
   height: 65px;
   width: 65px;
   background-image: url(${({ icon }) => icon});
