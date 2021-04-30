@@ -6,6 +6,7 @@ const FoundersAvatar = styled.img`
   border: 5px solid hsl(338, 100%, 42%);
   border-radius: 50px;
   margin: 30px;
+  background-size: cover;
 `;
 
 export default FoundersAvatar;

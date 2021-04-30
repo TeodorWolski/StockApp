@@ -1,6 +1,7 @@
 import React from 'react';
 import styled from 'styled-components';
 import PropTypes from 'prop-types';
+import Navbar from 'components/organisms/Navbar/Navbar';
 
 const StyledWrapper = styled.div`
   display: flex;
@@ -9,7 +10,12 @@ const StyledWrapper = styled.div`
   margin-top: 7%;
 `;
 
-const PageTemplate = ({ children }) => <StyledWrapper>{children}</StyledWrapper>;
+const PageTemplate = ({ children }) => (
+  <>
+    <Navbar />
+    <StyledWrapper>{children}</StyledWrapper>
+  </>
+);
 
 PageTemplate.propTypes = {
   children: PropTypes.element.isRequired,

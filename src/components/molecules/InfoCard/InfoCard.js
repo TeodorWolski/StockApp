@@ -75,7 +75,7 @@ const InfoCard = () => (
       search engine, cloud computing, software, and hardware.
     </StyledParagraph>
     <BottomWrapper>
-      <FoundersAvatar src="http://t2.gstatic.com/licensed-image?q=tbn:ANd9GcQQ840Wk_80H2JjO4wmYQ8VpNzck-GCsmu8a4HqMDNoeZNAH5Zw8qkRZc9a2C9v" />
+      <FoundersAvatar src="https://i.wpimg.pl/O/400x400/d.wpimg.pl/766422956--24694776/1larrypage.jpg" />
       <FoundersAvatar src="https://upload.wikimedia.org/wikipedia/commons/a/a2/Sergey_Brin_cropped.jpg" />
     </BottomWrapper>
   </StyledWrapper>
