@@ -1,8 +1,8 @@
 import React from 'react';
 import styled from 'styled-components';
+import PropTypes from 'prop-types';
 import Heading from 'components/atoms/Heading/Heading';
 import Paragraph from 'components/atoms/Paragraph/Paragraph';
-import GoogleIcon from 'assets/icons/google.svg';
 import CompanyIcon from 'components/atoms/CompanyIcon/CompanyIcon';
 import FoundersAvatar from 'components/atoms/FoundersAvatar/FoundersAvatar';
 
@@ -58,27 +58,41 @@ const BottomWrapper = styled.div`
   bottom: 0;
 `;
 
-const InfoCard = () => (
-  <StyledWrapper>
+const InfoCard = ({ title, link, content, founderOne, founderTwo, id, icon, foName, ftName }) => (
+  <StyledWrapper key={id}>
     <TopWrapper>
-      <StyledHeading big>Google</StyledHeading>
-      <StyledCompanyIcon
-        href="https://en.wikipedia.org/wiki/Google"
-        target="_blank"
-        rel="noopener noreferrer"
-        icon={GoogleIcon}
-      />
+      <StyledHeading big>{title}</StyledHeading>
+      <StyledCompanyIcon href={link} target="_blank" rel="noopener noreferrer" icon={icon} />
     </TopWrapper>
-    <StyledParagraph>
-      Google LLC is an American multinational technology company that specializes in
-      Internet-related services and products, which include online advertising technologies, a
-      search engine, cloud computing, software, and hardware.
-    </StyledParagraph>
+    <StyledParagraph>{content}</StyledParagraph>
     <BottomWrapper>
-      <FoundersAvatar src="https://i.wpimg.pl/O/400x400/d.wpimg.pl/766422956--24694776/1larrypage.jpg" />
-      <FoundersAvatar src="https://upload.wikimedia.org/wikipedia/commons/a/a2/Sergey_Brin_cropped.jpg" />
+      <FoundersAvatar alt={foName} src={founderOne} />
+      <FoundersAvatar alt={ftName} src={founderTwo} />
     </BottomWrapper>
   </StyledWrapper>
 );
+
+InfoCard.propTypes = {
+  id: PropTypes.number.isRequired,
+  title: PropTypes.string,
+  link: PropTypes.string,
+  content: PropTypes.string,
+  founderOne: PropTypes.string,
+  founderTwo: PropTypes.string,
+  icon: PropTypes.element,
+  foName: PropTypes.string,
+  ftName: PropTypes.string,
+};
+
+InfoCard.defaultProps = {
+  title: '',
+  link: '',
+  content: '',
+  founderOne: '',
+  founderTwo: '',
+  icon: '',
+  foName: '',
+  ftName: '',
+};
 
 export default InfoCard;
