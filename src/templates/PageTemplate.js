@@ -7,7 +7,7 @@ const StyledWrapper = styled.div`
   display: flex;
   align-items: center;
   justify-content: center;
-  margin-top: 7%;
+  margin-top: 8%;
 `;
 
 const PageTemplate = ({ children }) => (

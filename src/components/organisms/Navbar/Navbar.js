@@ -1,9 +1,10 @@
 import React from 'react';
 import styled from 'styled-components';
 import { NavLink } from 'react-router-dom';
+import { routes } from 'routes';
 
 const StyledWrapper = styled.nav`
-  width: 1000vh;
+  width: 100%;
   height: 10vh;
   background-color: #060817;
   border-bottom: 5px solid hsl(338, 100%, 42%);
@@ -12,24 +13,63 @@ const StyledWrapper = styled.nav`
   margin: 0;
   padding: 0;
   z-index: 1;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+`;
+
+const StyledList = styled.ul`
+  position: relative;
+  list-style: none;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-around;
+`;
+
+const StyledListItem = styled.li`
+  position: relative;
+  text-decoration: none;
+  margin: 5px 30px 5px 30px;
+`;
+
+const StyledNavLink = styled(NavLink)`
+  text-decoration: none;
+  font-size: 2.4rem;
+  color: white;
+
+  &:visited {
+    color: white;
+  }
+
+  &.active {
+    color: hsl(338, 100%, 42%);
+  }
 `;
 
 const Navbar = () => (
   <StyledWrapper>
-    {/* <ul>
-      <li>
-        <NavLink>Apple</NavLink>
-      </li>
-      <li>
-        <NavLink>Google</NavLink>
-      </li>
-      <li>
-        <NavLink>Amazon</NavLink>
-      </li>
-      <li>
-        <NavLink>Facebook</NavLink>
-      </li>
-    </ul> */}
+    <StyledList>
+      <StyledListItem>
+        <StyledNavLink to={routes.apple} activeclass="active">
+          Apple
+        </StyledNavLink>
+      </StyledListItem>
+      <StyledListItem>
+        <StyledNavLink to={routes.google} activeclass="active">
+          Google
+        </StyledNavLink>
+      </StyledListItem>
+      <StyledListItem>
+        <StyledNavLink to={routes.amazon} activeclass="active">
+          Amazon
+        </StyledNavLink>
+      </StyledListItem>
+      <StyledListItem>
+        <StyledNavLink to={routes.facebook} activeclass="active">
+          Facebook
+        </StyledNavLink>
+      </StyledListItem>
+    </StyledList>
   </StyledWrapper>
 );
 
