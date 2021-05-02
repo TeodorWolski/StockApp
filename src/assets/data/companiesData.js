@@ -58,7 +58,7 @@ export const Facebook = [
     title: 'FB Inc.',
     content:
       'Facebook is an American online social media and social networking service based in Menlo Park, California, and a flagship service of the namesake company Facebook, Inc. It was founded by Mark Zuckerberg, along with fellow Harvard College students and roommates Eduardo Saverin, Andrew McCollum, Dustin Moskovitz, and Chris Hughes.',
-    link: 'https://www.amazon.com/',
+    link: 'https://www.facebook.com/',
     founderOne:
       'https://news.harvard.edu/wp-content/uploads/2017/03/mark-zuckerberg-headshot-11.jpg',
     founderTwo: 'https://pbs.twimg.com/profile_images/1136126299863429120/xAjquS-v_400x400.jpg',
