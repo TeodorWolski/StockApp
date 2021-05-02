@@ -17,6 +17,7 @@ export const Apple = [
     icon: AppleIcon,
     foName: 'Steve Jobs',
     ftName: 'Steve Wozniak',
+    companyStockName: 'AAPL',
   },
 ];
 
@@ -32,6 +33,7 @@ export const Google = [
     icon: GoogleIcon,
     foName: 'Larry Page',
     ftName: 'Sergey Brin',
+    companyStockName: 'GOOG',
   },
 ];
 
@@ -49,6 +51,7 @@ export const Amazon = [
     icon: AmazonIcon,
     foName: 'Jeff Bezos',
     ftName: 'Andy Jassy',
+    companyStockName: 'AMZN',
   },
 ];
 
@@ -65,5 +68,6 @@ export const Facebook = [
     icon: FacebookIcon,
     foName: 'Mark Zuckerberg',
     ftName: 'Eduardo Saverin',
+    companyStockName: 'FB',
   },
 ];

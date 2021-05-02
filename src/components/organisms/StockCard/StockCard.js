@@ -1,8 +1,6 @@
-import React, { useEffect, useState, useMemo } from 'react';
+import React, { useEffect, useState } from 'react';
 import styled from 'styled-components';
-import { Line } from 'react-chartjs-2';
 import PropTypes from 'prop-types';
-import { theme } from 'theme/MainTheme';
 import Plot from 'react-plotly.js';
 
 const StyledWrapper = styled.div`
@@ -19,21 +17,19 @@ const StyledWrapper = styled.div`
   z-index: 1;
 `;
 
-const StockCard = () => {
+const StockCard = ({ companyStockName }) => {
   const [stockPrices, setStockPrices] = useState();
   const [stockDates, setStockDates] = useState();
-  const companyStock = 'AAPL';
 
   const Stock = () => {
-    const API_KEY = 'ZSCJY2VMQFOL1LAU';
-    const API_CALL = `https://www.alphavantage.co/query?function=TIME_SERIES_DAILY_ADJUSTED&symbol=${companyStock}&outputsize=full&apikey=${API_KEY}`;
+    const API_KEY = process.env.ApiKey;
+    const API_CALL = `https://www.alphavantage.co/query?function=TIME_SERIES_DAILY_ADJUSTED&symbol=${companyStockName}&outputsize=full&apikey=${API_KEY}`;
     const stockPriceInfo = [];
     const stockDateInfo = [];
 
     fetch(API_CALL)
       .then((response) => response.json())
       .then((data) => {
-        console.log(data);
         Object.keys(data['Time Series (Daily)']).forEach((key) => {
           stockDateInfo.push(key);
           stockPriceInfo.push(data['Time Series (Daily)'][key]['1. open']);
@@ -63,13 +59,17 @@ const StockCard = () => {
         layout={{
           width: 700,
           height: 500,
-          title: `${companyStock}`,
+          title: companyStockName,
           plot_bgcolor: '#060817',
           paper_bgcolor: '#060817',
         }}
       />
     </StyledWrapper>
   );
+};
+
+StockCard.propTypes = {
+  companyStockName: PropTypes.string.isRequired,
 };
 
 export default StockCard;

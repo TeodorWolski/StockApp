@@ -1,9 +1,4 @@
 export const theme = {
-  amazon: 'hsl(42, 94%, 53%)',
-  apple: 'hsl(40, 0%, 75%)',
-  facebook: 'hsl(245, 100%, 33%)',
-  google: 'hsl(114, 87%, 49%)',
-  tesla: 'hsl(0, 87%, 49%)',
   bold: 600,
   regular: 500,
   light: 300,

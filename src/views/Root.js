@@ -3,7 +3,6 @@ import { Switch, BrowserRouter, Route, Redirect } from 'react-router-dom';
 import MainTemplate from 'templates/MainTemplate';
 import PageTemplate from 'templates/PageTemplate';
 import { routes } from 'routes';
-import StartView from 'views/StartView';
 import Amazon from 'views/Amazon';
 import Apple from 'views/Apple';
 import Facebook from 'views/Facebook';
@@ -14,7 +13,7 @@ const Root = () => (
     <MainTemplate>
       <PageTemplate>
         <Switch>
-          <Route exact path={routes.home} component={StartView} />
+          <Route exact path={routes.home} render={() => <Redirect to={routes.apple} />} />
           <Route exact path={routes.amazon} component={Amazon} />
           <Route exact path={routes.apple} component={Apple} />
           <Route exact path={routes.facebook} component={Facebook} />
