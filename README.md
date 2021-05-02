@@ -1,4 +1,4 @@
-#FOR NOW DESKTOP ONLY
+# FOR NOW DESKTOP ONLY
 
 
 try it on this adress: https://faag-stocks.netlify.app/
