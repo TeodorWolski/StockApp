@@ -1,4 +1,10 @@
-# Getting Started with Create React App
+# FOR NOW DESKTOP ONLY
+
+
+try it on this adress: https://faag-stocks.netlify.app/
+
+
+Getting Started with Create React App
 
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
 
