@@ -8,6 +8,10 @@ const StyledWrapper = styled.div`
   align-items: center;
   justify-content: center;
   margin-top: 8%;
+
+  @media (max-width: 770px) {
+    margin-top: 30%;
+  }
 `;
 
 const PageTemplate = ({ children }) => (

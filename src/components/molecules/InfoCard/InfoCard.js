@@ -19,6 +19,10 @@ const StyledWrapper = styled.div`
   position: relative;
   z-index: 1;
   margin-left: 2%;
+
+  @media (max-width: 800px) {
+    display: none;
+  }
 `;
 
 const TopWrapper = styled.div`
@@ -47,6 +51,10 @@ const StyledParagraph = styled(Paragraph)`
   width: 260px;
   margin-left: 0;
   text-align: center;
+
+  @media (min-width: 750px) {
+    position: relative;
+  }
 `;
 
 const BottomWrapper = styled.div`

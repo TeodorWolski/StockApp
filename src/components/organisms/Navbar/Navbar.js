@@ -12,7 +12,9 @@ const StyledWrapper = styled.nav`
   top: 0;
   margin: 0;
   padding: 0;
-  z-index: 1;
+  z-index: 3;
+  left: 0;
+  right: 0;
   display: flex;
   justify-content: center;
   align-items: center;

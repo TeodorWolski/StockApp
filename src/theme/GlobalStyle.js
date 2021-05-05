@@ -18,6 +18,12 @@ body {
     padding: 0;
     font-size: 1.6rem;
     font-family: "Montserrat", sans-serif;
+
+    @media(max-width: 800px) {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+    }
 }
 body::before {
     content: '';
