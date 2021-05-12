@@ -21,6 +21,9 @@ const StyledWrapper = styled.div`
   margin-left: 2%;
 
   @media (max-width: 800px) {
+    /* transform: translate(${({ isVisible }) => (isVisible ? '0' : '100%')});
+    transition: transform 0.3s ease-in-out;
+    position: absolute; */
     display: none;
   }
 `;

@@ -15,6 +15,10 @@ const StyledWrapper = styled.div`
   z-index: 9999;
   left: 10%;
   bottom: 20%;
+
+  @media (min-width: 810px) {
+    display: none;
+  }
 `;
 
 const StyledButton = styled.div`
