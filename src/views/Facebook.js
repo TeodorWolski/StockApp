@@ -2,6 +2,7 @@ import React from 'react';
 import StockCard from 'components/organisms/StockCard/StockCard';
 import InfoCard from 'components/molecules/InfoCard/InfoCard';
 import { Facebook as FacebookData } from 'assets/data/companiesData';
+import HideCardButton from 'components/molecules/HideButton/HideCardButton';
 
 const Facebook = () =>
   FacebookData.map(
@@ -30,6 +31,7 @@ const Facebook = () =>
           ftName={ftName}
         />
         <StockCard companyStockName={companyStockName} />
+        <HideCardButton icon={icon} />
       </>
     ),
   );

@@ -1,6 +1,7 @@
 import React from 'react';
 import StockCard from 'components/organisms/StockCard/StockCard';
 import InfoCard from 'components/molecules/InfoCard/InfoCard';
+import HideCardButton from 'components/molecules/HideButton/HideCardButton';
 import { Google as GoogleData } from 'assets/data/companiesData';
 
 const Google = () =>
@@ -30,6 +31,7 @@ const Google = () =>
           ftName={ftName}
         />
         <StockCard companyStockName={companyStockName} />
+        <HideCardButton icon={icon} />
       </>
     ),
   );
