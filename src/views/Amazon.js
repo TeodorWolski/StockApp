@@ -15,6 +15,7 @@ const Amazon = () =>
       foName,
       ftName,
       companyStockName,
+      isVisible,
     }) => (
       <StockPage
         title={title}
@@ -27,6 +28,7 @@ const Amazon = () =>
         foName={foName}
         ftName={ftName}
         icon={icon}
+        isVisible={isVisible}
       />
     ),
   );

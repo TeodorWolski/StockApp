@@ -21,10 +21,11 @@ const StyledWrapper = styled.div`
   margin-left: 2%;
 
   @media (max-width: 800px) {
-    /* transform: translate(${({ isVisible }) => (isVisible ? '0' : '100%')});
-    transition: transform 0.3s ease-in-out;
-    position: absolute; */
-    display: none;
+    transform: translate(${({ isVisible }) => (isVisible ? '-100%' : '100%')});
+    transition: transform 0.4s ease-in-out;
+    position: absolute;
+    z-index: 9999999;
+    right: 67%;
   }
 `;
 
@@ -69,8 +70,19 @@ const BottomWrapper = styled.div`
   bottom: 0;
 `;
 
-const InfoCard = ({ title, link, content, founderOne, founderTwo, id, icon, foName, ftName }) => (
-  <StyledWrapper key={id}>
+const InfoCard = ({
+  title,
+  link,
+  content,
+  founderOne,
+  founderTwo,
+  id,
+  icon,
+  foName,
+  ftName,
+  isVisible,
+}) => (
+  <StyledWrapper isVisible={isVisible} key={id}>
     <TopWrapper>
       <StyledHeading big>{title}</StyledHeading>
       <StyledCompanyIcon href={link} target="_blank" rel="noopener noreferrer" icon={icon} />
@@ -93,6 +105,7 @@ InfoCard.propTypes = {
   icon: PropTypes.element,
   foName: PropTypes.string,
   ftName: PropTypes.string,
+  isVisible: PropTypes.bool.isRequired,
 };
 
 InfoCard.defaultProps = {

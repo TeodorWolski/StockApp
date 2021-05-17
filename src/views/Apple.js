@@ -19,7 +19,7 @@ const Apple = () =>
       <StockPage
         title={title}
         content={content}
-        id={id}
+        key={id}
         founderOne={founderOne}
         founderTwo={founderTwo}
         link={link}

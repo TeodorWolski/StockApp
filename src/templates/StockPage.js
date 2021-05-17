@@ -15,27 +15,34 @@ const StockPage = ({
   foName,
   ftName,
   companyStockName,
-}) => (
-  <>
-    <InfoCard
-      title={title}
-      content={content}
-      key={id}
-      founderOne={founderOne}
-      founderTwo={founderTwo}
-      link={link}
-      icon={icon}
-      foName={foName}
-      ftName={ftName}
-    />
-    <StockCard companyStockName={companyStockName} />
-    <HideCardButton icon={icon} />
-  </>
-);
+}) => {
+  const [isVisible, changeVisibility] = useState(false);
+
+  const isInfoCardVisible = () => changeVisibility(!isVisible);
+
+  return (
+    <>
+      <InfoCard
+        title={title}
+        content={content}
+        key={id}
+        founderOne={founderOne}
+        founderTwo={founderTwo}
+        link={link}
+        icon={icon}
+        foName={foName}
+        ftName={ftName}
+        isVisible={isVisible}
+      />
+      <StockCard companyStockName={companyStockName} isVisible={isVisible} />
+      <HideCardButton onClick={isInfoCardVisible} icon={icon} />
+    </>
+  );
+};
 
 StockPage.propTypes = {
   companyStockName: PropTypes.string.isRequired,
-  id: PropTypes.number.isRequired,
+  id: PropTypes.number,
   title: PropTypes.string,
   link: PropTypes.string,
   content: PropTypes.string,
@@ -49,6 +56,7 @@ StockPage.propTypes = {
 StockPage.defaultProps = {
   title: '',
   link: '',
+  id: 0,
   content: '',
   founderOne: '',
   founderTwo: '',

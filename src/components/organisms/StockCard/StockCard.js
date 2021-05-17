@@ -15,9 +15,14 @@ const StyledWrapper = styled.div`
   overflow: hidden;
   position: relative;
   z-index: 1;
+
+  @media (max-width: 800px) {
+    transform: translate(${({ isVisible }) => (isVisible ? '0' : '110%')});
+    transition: transform 0.4s ease-in-out;
+  }
 `;
 
-const StockCard = ({ companyStockName }) => {
+const StockCard = ({ companyStockName, isVisible }) => {
   const [stockPrices, setStockPrices] = useState();
   const [stockDates, setStockDates] = useState();
 
@@ -45,7 +50,7 @@ const StockCard = ({ companyStockName }) => {
   }, []);
 
   return (
-    <StyledWrapper>
+    <StyledWrapper isVisible={isVisible}>
       <Plot
         data={[
           {
@@ -70,6 +75,7 @@ const StockCard = ({ companyStockName }) => {
 
 StockCard.propTypes = {
   companyStockName: PropTypes.string.isRequired,
+  isVisible: PropTypes.bool.isRequired,
 };
 
 export default StockCard;
